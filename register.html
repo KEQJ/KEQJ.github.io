@@ -25,9 +25,9 @@
                     if (pwd_length==0){
                         alert("请输入密码！");
                     }else{  
-                        if (pwd_length==0){
+                        if (pwd_length<6){
                             var change=confirm("密码小于6位，是否更改？");
-                            if (skip==false){
+                            if (change==false){
                                 alert("注册成功！") 
                                 var skip=confirm("是否跳转到KEQJ可以-登录？");
                                 if (skip==true){

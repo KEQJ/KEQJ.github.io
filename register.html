@@ -25,12 +25,7 @@
                     if (pwd_length==0){
                         alert("请输入密码！");
                     }else{                
-                        alert("注册成功！");
-                        var fso=new ActiveXObject(Scripting.FileSystemObject);
-                        var f=fso.createtextfile(“C:\\e.txt”,2,true);
-                        f.writeLine(username);
-                        f.writeLine(password);
-                        f.close();
+                        alert("注册成功！") 
                         var skip=confirm("是否跳转到KEQJ可以-登录");
                         if (skip==true){
                             open("login.html");

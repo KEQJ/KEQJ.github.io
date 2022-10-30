@@ -6,9 +6,40 @@
         <link rel="stylesheet" href="background.css" type="text/css">
         <link rel="shortcut icon" href="logo.ico">
         <style type="text/css">
+            .RU{
+                float:right;
+            }
+            .center{
+                text-align:center;
+            }
         </style>
+        <script type="text/javascript">
+            function login(){
+                var d_username=document.getElementById("d_une").value;
+                var d_password=document.getElementById("d_pwd").value;
+                var username=localStorage.getItem(username);
+                var password=localStorage.getItem(password);
+                if (d_username==username){
+                    if (d_password==password){
+                        alert("登录成功！");
+                    }else{
+                         alert("密码错误！")
+                    }
+                }else{
+                     alert("用户名错误！")
+                }
+            }
+        </script>
     </head>
     <body>
-
+        <div class="center">            
+            <form>                
+                用户名：<input type="text" name="d_username" id="d_une"/>                
+                <br>                
+                密&nbsp;码：<input type="password" name="d_password" id="d_pwd"/>                
+                <br>                
+                <input type="button" value="登录" name="login_button">onclick="login()">                                                 
+            </form>                                   
+        </div> 
     </body>
 </html>

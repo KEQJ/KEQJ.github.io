@@ -28,6 +28,8 @@
                         if (pwd_length<6){
                             var change=confirm("密码小于6位，是否更改？");
                             if (change==false){
+                                localStorage.setItem("username",username)
+                                localStorage.setItem("password",password)
                                 alert("注册成功！") 
                                 var skip=confirm("是否跳转到KEQJ可以-登录？");
                                 if (skip==true){
@@ -48,7 +50,7 @@
                <br>
                密&nbsp;码：<input type="password" name="password" id="pwd"/>
                <br>
-               <input type="button" value="注册" name="register_button" onclick="register()"                                                                    
+               <input type="button" value="注册" name="register_button" onclick="register()">                                                                
            </form>                                  
         </div>                   
         <div class="RU">
